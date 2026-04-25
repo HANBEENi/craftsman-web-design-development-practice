@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹디자인개발기능사 레이아웃 A-1</title>
+    <style>
+      /* Reset CSS */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Wrap CSS */
+      #wrap {
+        width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* Header CSS */
+      #header {
+        width: 1200px;
+        height: 100px;
+        display: flex;
+      }
+      #header .logo {
+        width: 20%;
+        height: 100px;
+      }
+      #header .nav {
+        width: 80%;
+        height: 100px;
+        background-color: rgb(183, 203, 203);
+      }
+
+      /* Slider CSS */
+      #slider {
+        width: 1200px;
+        height: 300px;
+        background-color: #0f0;
+      }
+
+      /* Contents CSS */
+      #contents {
+        width: 1200px;
+        height: 200px;
+        background-color: rgb(101, 101, 255);
+      }
+      #contents .content1 {
+        width: 33.3%;
+        height: 200px;
+        background-color: rgb(223, 40, 255);
+        float: left;
+      }
+      #contents .content2 {
+        width: 33.3%;
+        height: 200px;
+        background-color: rgb(157, 104, 186);
+        float: left;
+      }
+      #contents .content3 {
+        width: 33.3%;
+        height: 200px;
+        background-color: rgb(184, 178, 239);
+        float: left;
+      }
+
+      /* Footer CSS */
+      #footer {
+        width: 1200px;
+        height: 100px;
+        background-color: #ccc;
+      }
+      #footer .footer-content1 {
+        width: 33.3%;
+        height: 100px;
+        background-color: #ffd35bb5;
+        float: left;
+      }
+      #footer .footer-content2 {
+        width: 33.3%;
+        height: 100px;
+        background-color: #f8d34b;
+        float: left;
+      }
+      #footer .footer-content3 {
+        width: 33.3%;
+        height: 100px;
+        background-color: #fce788;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- Header -->
+      <div id="header">
+        <div class="logo">로고</div>
+        <div class="nav">네비게이션</div>
+      </div>
+
+      <!-- Slider -->
+      <div id="slider">슬라이더</div>
+
+      <!-- Contents -->
+      <div id="contents">
+        <div class="content1">콘텐츠 1</div>
+        <div class="content2">콘텐츠 2</div>
+        <div class="content3">콘텐츠 3</div>
+      </div>
+
+      <!-- Footer -->
+      <div id="footer">
+        <div class="footer-content1">푸터 1</div>
+        <div class="footer-content2">푸터 2</div>
+        <div class="footer-content3">푸터 3</div>
+      </div>
+    </div>
+  </body>
+</html>
