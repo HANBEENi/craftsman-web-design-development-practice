@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹디자인개발기능사 레이아웃 C-1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* WRAP CSS */
+      #wrap {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      /* ASIDE CSS */
+      #aside {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        background-color: #dbdbdb;
+      }
+      #logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+        font-size: 30px;
+        font-weight: bold;
+        background-color: #1993fe;
+      }
+      #nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: #a7e5ff;
+      }
+
+      /* MAIN CSS */
+      #main {
+        width: 100%;
+        background-color: #a7e5ff;
+      }
+      #slide {
+        width: 100%;
+        height: 350px;
+        background-color: #79c0ff;
+      }
+      #contents {
+        display: flex;
+        width: 100%;
+        height: 200px;
+      }
+      .content1 {
+        width: 33.3%;
+        height: 100%;
+        background-color: #4d4d4d;
+      }
+      .content2 {
+        width: 33.3%;
+        height: 100%;
+        background-color: #909090;
+      }
+      .content3 {
+        width: 33.3%;
+        height: 100%;
+        background-color: #666666;
+      }
+      #footer {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        background-color: #4d4d4d;
+      }
+      .footer-logo {
+        width: 20%;
+        height: 100%;
+        background-color: #737373;
+      }
+      .footer-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .footer-content1-1,
+      .footer-content1-2 {
+        flex: 1;
+        background-color: #bcbcbc;
+      }
+      .footer-content1-1 {
+        background-color: #999999;
+      }
+      .footer-content1-2 {
+        background-color: #808080;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- ASIDE -->
+      <aside id="aside">
+        <div id="logo">로고</div>
+        <nav id="nav">메뉴</nav>
+      </aside>
+
+      <!-- MAIN -->
+      <main id="main">
+        <section id="slide">이미지슬라이드</section>
+
+        <section id="contents">
+          <div class="content1">콘텐츠1</div>
+          <div class="content2">콘텐츠2</div>
+          <div class="content3">콘텐츠3</div>
+        </section>
+
+        <section id="footer">
+          <div class="footer-logo">로고</div>
+          <div class="footer-content">
+            <div class="footer-content1-1">하단메뉴1</div>
+            <div class="footer-content1-2">하단메뉴2</div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
