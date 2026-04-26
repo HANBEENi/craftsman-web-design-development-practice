@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹디자인개발기능사 레이아웃 B-1</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      #wrap {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      /* HEADER CSS */
+      #header {
+        height: 100px;
+        background-color: #dbdbdb;
+      }
+      #header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+
+        width: 100%;
+        max-width: 1200px;
+        height: 100%;
+      }
+      #logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 20%;
+        height: 100%;
+
+        font-size: 30px;
+        font-weight: bold;
+        background-color: #79c0ff;
+      }
+      #nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: #a7e5ff;
+      }
+
+      /* MAIN CSS */
+      #main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      #sidebar {
+        height: 300px;
+        background-color: #9aff63;
+      }
+      #content {
+        display: flex;
+        width: 100%;
+        height: 200px;
+      }
+      .content1,
+      .content2,
+      .content3 {
+        flex: 1;
+        background-color: #eee;
+      }
+
+      .content1 {
+        background-color: #ffb452;
+      }
+      .content2 {
+        background-color: #ffdb4d;
+      }
+      .content3 {
+        background-color: #ffff99;
+      }
+
+      /* FOOTER CSS */
+      #footer {
+        height: 100px;
+        background-color: #dddddd;
+      }
+      .footer-contents {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      #footer-content1 {
+        width: 20%;
+        height: 100%;
+        background-color: #4d4d4d;
+      }
+      #footer-content2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .footer-content2-1 {
+        background-color: #737373;
+        flex: 1;
+      }
+      .footer-content2-2 {
+        background-color: #bcbcbc;
+        flex: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <!-- HEADER -->
+      <header id="header">
+        <div id="header-content">
+          <h1 id="logo">로고</h1>
+          <nav id="nav">네비게이션</nav>
+        </div>
+      </header>
+
+      <!-- MAIN -->
+      <main id="main">
+        <section id="sidebar">이미지 슬라이드</section>
+
+        <section id="content">
+          <div class="content1">공지사항/갤러리</div>
+          <div class="content2">배너</div>
+          <div class="content3">바로가기</div>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer id="footer">
+        <div class="footer-contents">
+          <section id="footer-content1">로고</section>
+          <section id="footer-content2">
+            <div class="footer-content2-1">하단메뉴</div>
+            <div class="footer-content2-2">COPYRIGHT</div>
+          </section>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
