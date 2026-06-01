@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹디자인개발기능사 메뉴 레이아웃 연습하기 M-3</title>
+  </head>
+  <style>
+    /* COMMON CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+      list-style: none;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER CSS */
+    #header {
+      display: flex;
+      width: 100%;
+      height: 100px;
+      background-color: #dbdbdb;
+    }
+    #logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 100%;
+      font-size: 30px;
+      font-weight: bold;
+      background-color: #b9b9b9;
+    }
+    #nav {
+      display: flex;
+      justify-content: end;
+      align-items: end;
+
+      position: relative;
+
+      width: 100%;
+      height: 100%;
+    }
+    #nav ul:hover {
+      cursor: pointer;
+    }
+    #nav li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 180px;
+      height: 43px;
+    }
+    #nav .main-menu {
+      display: flex;
+      padding-right: 20px;
+    }
+    #nav .main-menu li {
+    }
+    #nav .main-menu li:hover {
+      background-color: #727272;
+    }
+    #nav .sub-menu-wrap {
+      display: flex;
+      position: absolute;
+      right: 0;
+      top: 100%;
+    }
+    #nav .sub-menu-wrap .sub-menu {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+
+      background-color: #5c5c5c;
+      width: 100vw;
+      padding: 10px 0;
+      padding-right: 20px;
+    }
+    #nav .sub-menu ul {
+    }
+    #nav .sub-menu ul li {
+    }
+    #nav .sub-menu ul li:hover {
+      color: #f5f5f5;
+    }
+
+    /* SLIDER CSS */
+    #slider {
+      width: 100%;
+      height: 400px;
+      background-color: #989898;
+    }
+
+    /* CONTENT CSS */
+    #content {
+      display: flex;
+      width: 100%;
+      height: 400px;
+      background-color: #f5f5f5;
+    }
+    #content .article-1 {
+      flex: 1;
+      height: 100%;
+      background-color: #dbdbdb;
+      float: left;
+    }
+    #content .article-2 {
+      flex: 1;
+      height: 100%;
+      background-color: #adadad;
+      float: left;
+    }
+    #content .article-3 {
+      flex: 1;
+      height: 100%;
+      background-color: #737373;
+      float: left;
+    }
+
+    /* FOOTER CSS */
+    #footer {
+      display: flex;
+      width: 100%;
+      height: 100px;
+      background-color: #dbdbdb;
+    }
+    #footer .footer-1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 100%;
+      background-color: #5c5c5c;
+      color: #dbdbdb;
+    }
+    #footer .footer-2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: #b0b0b0;
+      color: #dbdbdb;
+    }
+    #footer .footer-3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 100%;
+      background-color: #5c5c5c;
+      color: #dbdbdb;
+    }
+  </style>
+  <body>
+    <!-- HEADER -->
+    <header id="header">
+      <div id="logo">LOGO</div>
+      <nav id="nav">
+        <ul class="main-menu">
+          <li><a href="">메뉴1</a></li>
+          <li><a href="">메뉴2</a></li>
+          <li><a href="">메뉴3</a></li>
+          <li><a href="">메뉴4</a></li>
+
+          <div class="sub-menu-wrap">
+            <div class="sub-menu">
+              <ul>
+                <li><a href="">서브메뉴1-1</a></li>
+                <li><a href="">서브메뉴1-2</a></li>
+                <li><a href="">서브메뉴1-3</a></li>
+                <li><a href="">서브메뉴1-4</a></li>
+              </ul>
+              <ul>
+                <li><a href="">서브메뉴2-1</a></li>
+                <li><a href="">서브메뉴2-2</a></li>
+                <li><a href="">서브메뉴2-3</a></li>
+                <li><a href="">서브메뉴2-4</a></li>
+              </ul>
+              <ul>
+                <li><a href="">서브메뉴3-1</a></li>
+                <li><a href="">서브메뉴3-2</a></li>
+                <li><a href="">서브메뉴3-3</a></li>
+                <li><a href="">서브메뉴3-4</a></li>
+              </ul>
+              <ul>
+                <li><a href="">서브메뉴4-1</a></li>
+                <li><a href="">서브메뉴4-2</a></li>
+                <li><a href="">서브메뉴4-3</a></li>
+                <li><a href="">서브메뉴4-4</a></li>
+              </ul>
+            </div>
+          </div>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- /* SLIDER */ -->
+    <section id="slider"></section>
+
+    <!-- /* CONTENT */ -->
+    <section id="content">
+      <article class="article-1"></article>
+      <article class="article-2"></article>
+      <article class="article-3"></article>
+    </section>
+
+    <!-- /* FOOTER */ -->
+    <footer id="footer">
+      <div class="footer-1"></div>
+      <div class="footer-2"></div>
+      <div class="footer-3"></div>
+    </footer>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#nav .main-menu li').hover(
+        function () {
+          $('.sub-menu-wrap').stop().slideDown(300);
+        },
+        function () {
+          $('.sub-menu-wrap').stop().slideUp(300);
+        },
+      );
+    });
+  </script>
+</html>

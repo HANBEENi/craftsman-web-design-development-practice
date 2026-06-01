@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹디자인개발기능사 메뉴 레이아웃 연습하기 M-2</title>
+  </head>
+  <style>
+    /* COMMON CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-decoration: none;
+      color: inherit;
+      box-sizing: border-box;
+    }
+
+    /* HEADER CSS */
+    #header {
+      display: flex;
+      width: 100%;
+      height: 100px;
+      background-color: #dbdbdb;
+    }
+    #logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 100%;
+      font-size: 30px;
+      font-weight: bold;
+      background-color: #5c5c5c;
+    }
+    #nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+      padding-right: 20px;
+
+      width: 100%;
+      height: 100%;
+      background-color: #afafaf;
+    }
+    #nav .main-menu {
+      display: flex;
+      position: relative;
+    }
+    #nav .main-menu > li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 180px;
+      height: 43px;
+      background-color: #dbdbdb;
+      cursor: pointer;
+    }
+    #nav .main-menu > li:hover {
+      background-color: #494949;
+      color: #dbdbdb;
+    }
+    #nav .sub-menu {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 0;
+    }
+    #nav .sub-menu-inner {
+      display: flex;
+    }
+    #nav .sub-menu-inner ul {
+      display: flex;
+      flex-direction: column;
+    }
+    #nav .sub-menu-inner ul li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 180px;
+      height: 43px;
+      background-color: #f0f0f0;
+      color: #494949;
+    }
+    #nav .sub-menu-inner ul li:hover {
+      background-color: #e2fffd;
+      color: #494949;
+    }
+
+    /* SLIDER CSS */
+    #slider {
+      width: 100%;
+      height: 350px;
+      background-color: #727272;
+    }
+
+    /* CONTENTS CSS */
+    #contents {
+      display: flex;
+      width: 100%;
+      height: 200px;
+    }
+    #content1 {
+      flex: 1;
+      height: 100%;
+      background-color: #dbdbdb;
+    }
+    #content2 {
+      flex: 1;
+      height: 100%;
+      background-color: #a4a4a4;
+    }
+    #content3 {
+      flex: 1;
+      height: 100%;
+      background-color: #646464;
+    }
+
+    /* FOOTER CSS */
+    #footer {
+      display: flex;
+      width: 100%;
+      height: 100px;
+    }
+    #f-info1 {
+      width: 200px;
+      height: 100%;
+      background-color: #4a4a4a;
+    }
+    #f-info2 {
+      width: 100%;
+      height: 100%;
+      background-color: #717171;
+    }
+    #f-info3 {
+      width: 200px;
+      height: 100%;
+      background-color: #494949;
+    }
+  </style>
+  <body>
+    <!-- HEADER -->
+    <header id="header">
+      <div id="logo"></div>
+      <nav id="nav">
+        <ul class="main-menu">
+          <li>
+            <a href="#">메뉴1</a>
+          </li>
+          <li>
+            <a href="#">메뉴2</a>
+          </li>
+          <li>
+            <a href="#">메뉴3</a>
+          </li>
+          <li>
+            <a href="#">메뉴4</a>
+          </li>
+          <div class="sub-menu">
+            <div class="sub-menu-inner">
+              <ul>
+                <li><a href="#">서브메뉴1-1</a></li>
+                <li><a href="#">서브메뉴1-2</a></li>
+                <li><a href="#">서브메뉴1-3</a></li>
+                <li><a href="#">서브메뉴1-4</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">서브메뉴2-1</a></li>
+                <li><a href="#">서브메뉴2-2</a></li>
+                <li><a href="#">서브메뉴2-3</a></li>
+                <li><a href="#">서브메뉴2-4</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">서브메뉴3-1</a></li>
+                <li><a href="#">서브메뉴3-2</a></li>
+                <li><a href="#">서브메뉴3-3</a></li>
+                <li><a href="#">서브메뉴3-4</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">서브메뉴4-1</a></li>
+                <li><a href="#">서브메뉴4-2</a></li>
+                <li><a href="#">서브메뉴4-3</a></li>
+                <li><a href="#">서브메뉴4-4</a></li>
+              </ul>
+            </div>
+          </div>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="slider"></section>
+
+    <section id="contents">
+      <div id="content1"></div>
+      <div id="content2"></div>
+      <div id="content3"></div>
+    </section>
+
+    <footer id="footer">
+      <div id="f-info1"></div>
+      <div id="f-info2"></div>
+      <div id="f-info3"></div>
+    </footer>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#nav ul').hover(
+        function () {
+          $(this).find('.sub-menu').stop().slideDown(200);
+        },
+        function () {
+          $(this).find('.sub-menu').stop().slideUp(200);
+        },
+      );
+    });
+  </script>
+</html>
